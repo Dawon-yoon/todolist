@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  background-image: url(../img/cute-grid-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  background-color: #fef4ac;
+  min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.task-area {
+  border: 1px solid #92bff3;
+}
+
+.task-tabs {
+  display: flex;
+  border-bottom: 1px solid #92bff3;
+  position: relative;
+}
+.task-tab {
+  padding: 1em;
+}
+
+#underline {
+  position: absolute;
+  background-color: #909ef7;
+  height: 4.5px;
+  transition: 0.5s;
+  bottom: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
