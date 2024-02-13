@@ -40,3 +40,24 @@ body {
   justify-content: space-between;
   padding: 1em;
 }
+
+.task-done {
+  text-decoration: line-through;
+}
+.task-grey {
+  background-color: #909ef7;
+}
+
+.fa-trash {
+  color: tomato;
+}
+.fa-check {
+  color: yellowgreen;
+}
+.fa-rotate-left {
+  color: grey;
+}
+
+.task button {
+  border: none;
+}
