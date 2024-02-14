@@ -64,7 +64,6 @@ function toggleComplete(id) {
   for (let i = 0; i < todoList.length; i++) {
     if (todoList[i].id === id) {
       todoList[i].isComplete = !todoList[i].isComplete;
-      break;
     }
   }
   render();
@@ -74,6 +73,27 @@ function toggleDelete(id) {
   for (let i = 0; i < todoList.length; i++) {
     if (todoList[i].id === id) {
       todoList.splice(i, 1);
+      if (mode === "all") {
+        for (let j = 0; j < todoList.length; j++) {
+          if (todoList[j].id === id) {
+            todoList.splice(j, 1);
+            break;
+          }
+        }
+      } else {
+        for (let j = 0; j < todoList.length; j++) {
+          if (todoList[j].id === id) {
+            todoList.splice(j, 1);
+            break;
+          }
+        }
+        for (let j = 0; j < filterList.length; j++) {
+          if (filterList[j].id === id) {
+            filterList.splice(j, 1);
+            break;
+          }
+        }
+      }
       break;
     }
   }
@@ -102,6 +122,7 @@ function filter(event) {
       }
     }
   }
+
   render();
 }
 
